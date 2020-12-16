@@ -1,1 +1,29 @@
-<! -- vivian hiiiiihi -- >
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vivian Thai's Lab 6</title>
+        <link rel="stylesheet" href="form_styles.css">
+    </head>
+    <body>
+        <header>        
+            <h1>HTML Forms Lab</h1>
+        </header>
+        <form action="https://fierce-taiga-97625.herokuapp.com/lab" method="POST">
+            <ul>
+                <li>
+                    <label for="name"><strong>Name:</strong></label>
+                    <input type="text" id="name" name="name" maxlength="140">
+                </li>
+                <li>
+                    <label for="interests"><strong>Interests:</strong></label>
+                    <textarea id="interests" name="interests" rows="5" cols="33"></textarea>
+                </li>
+                <li class="button">
+                    <button type="submit">Submit</button>
+                </li>  
+            </ul>
+        </form>     
+    </body>
+</html>
