@@ -1,4 +1,4 @@
-let busRouteURL = "https://api.umd.io/v0/bus/routes"
+//let busRouteURL = "https://api.umd.io/v0/bus/routes"
 
 fetch(busRouteURL)
     .then((response) => {
