@@ -1,13 +1,11 @@
-.title {
+.title, h1 {
     font-family: "Bebas Neue";
 }
 
-p{
+.wrapper p{
     display: block;
     margin-inline-start: 40px;
 }
-
-
 
 
 .main {
@@ -24,41 +22,26 @@ p{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
-
-
 .name {
     display: flex;
     justify-content: center;
 }
 
-
-/*p {
-    position: relative;
-    left: 30px;
-}
-*/ 
-
-.teamwrap{
+.team{
     border: 1px solid rgb(37, 116, 40);
     padding: 5%;
-
-    list-style-type: none;
-    flex: 2;
-    display: flex;
 }
+
 img {
     vertical-align:middle;
-    margin:50px 0px;
+    margin-top: 10px;
     border-radius: 50%;
     max-width: 200px;
     height: 200px;
     filter: grayscale(100%);
 }
 
-ul {
-
-}
-
-ul {
+.v, .z, .p, .t, .h {
+    display: flex;
     list-style-type: none;
 }
