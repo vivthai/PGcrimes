@@ -1,0 +1,229 @@
+table, th, td {
+    border: 1px solid black;
+  }
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #76E3DA;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 120%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  }
+  a:link {
+    text-decoration: none;
+    color:#155E58;
+
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color:#155E58;
+  }
+  
+  a:hover {
+    color:white;
+  }
+  
+  a:active {
+    color:white;
+  }
+
+
+
+
+  body{
+    font-size: 14pt;
+}
+
+#search{
+    width: 80%; 
+    margin: auto; 
+    display: block; 
+    text-align: center; 
+    margin-top: 50px;
+}
+
+#searchin{
+    float: left;
+    width: 90%; 
+    height: 30px;
+}
+
+#btngo{
+    float: left;
+    width: 10%; 
+    height: 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+#list{
+     padding: 0;
+     list-style-type: none;
+     display: none; 
+     position: absolute; 
+     z-index: 9999; 
+     width: 80%; 
+     margin-top: 30px;
+     max-height: 120px;
+     overflow: hidden;
+     overflow-y: scroll;
+}
+
+#list > li{
+     text-align: left;
+     padding: 5px;
+     display: none;
+}
+
+#list > li:hover{
+      background-color: #eee;
+}
+/*
+.searchbar{
+  margin-top:25px;
+ margin-left:283px;
+ width:100%;
+}
+.bar{
+  border-radius:0;
+  box-shadow: 2px 3px 0px -2px #ccc;
+  padding:10px;
+  border:0px;
+  outline: none;
+  border-top: 1px solid #ccc;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #CCC;
+}
+.bar:hover{
+  box-shadow: 3px 6px 7px -3px #ccc;
+}
+*/
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+body{
+    font-family: "Bebas Neue";
+}
+section{
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container{
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00000010;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.form-group{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.form-group input,
+.form-group textarea{
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    margin-top: 5px;
+}
+textarea{
+    resize: vertical;
+}
+button[type="submit"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 8px;
+    font-family: "Bebas Neue";
+    color: rgb(0, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: .3s ease background;
+}
+button[type="submit"]:hover{
+    background-color: rgb(214, 226, 236);
+}
+
+/* #status{
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border: center;
+}
+#status.success{
+    background-color: rgb(211, 250, 153);
+}
+#status.error{
+    background-color: rgb(250, 129, 92);
+    color: white;
+} */
+
+/* body{
+    background-color: #FBEBD7; 
+}
+
+h1{
+    text-align: center;
+    color:  #000000;
+    font-family: "Times New Roman", Times, serif;
+}
+
+form { 
+    margin: auto;
+    width: 400px;
+}
+
+
+label {
+    display: block;
+    width: 10px;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:  #000000;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 17px;
+}
+
+input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    font-family: "Times New Roman", Times, serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.button{  
+    color: #FF9B39;
+    border-radius: 15px;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+} */

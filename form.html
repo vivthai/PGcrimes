@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vivian Thai's Lab 6</title>
-        <link rel="stylesheet" href="form_styles.css">
-    </head>
-    <body>
-        <header>        
-            <h1>HTML Forms Lab</h1>
-        </header>
-        <form action="https://fierce-taiga-97625.herokuapp.com/lab" method="POST">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG Crimes</title>
+
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <ol><a href="index.html">Home</a></ol>
+        <ol><a href="about.html">About</a></ol>
+        <ol><a href="data.html">Data</a></ol>
+        <ol><a href="form.html">Form</a></ol>
+    </div>
+    <h1 class="title">Contact Us!</h1>
+
+        <section>
+            <div class="container">
+                <form action="https://formspree.io/f/xnqogykp" method= "POST">
+                    <div class="form-group">
+                        <label for= "firstName"> First Name</label>
+                        <input type="text" id="firstName" name="firstName">                        
+                    </div>
+                    <div class="form-group">
+                        <label for= "lastName"> Last Name</label>
+                        <input type="text" id="lastName" name="lastName">                        
+                    </div>
+                    <div class="form-group">
+                        <label for= "email"> Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for= "message"> Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <!-- <div id="status" class="success">Success</div> -->
+        </section>
+    </body>
+<!-- 
+    <form action="https://formsubmit.co/vthai@terpmail.umd.edu" method="POST">
             <ul>
                 <li>
                     <label for="name"><strong>Name:</strong></label>
@@ -25,5 +61,5 @@
                 </li>  
             </ul>
         </form>     
-    </body>
+    </body> -->
 </html>
