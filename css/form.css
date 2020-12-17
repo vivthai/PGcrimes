@@ -12,10 +12,12 @@ section{
 }
 .title{
     margin-bottom: -5px;
+    text-align: center;
 }
 p.a {
     margin-left: 50px;
     font: 16px Roboto, sans-serif;
+    text-align: center;
   }  
 .container{
     width: 90%;

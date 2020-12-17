@@ -1,10 +1,12 @@
 .title {
     font-family: "Bebas Neue";
     margin-bottom: -5px;
+    text-align: center;
 }
 .intro {
   margin-left: 50px;
   font: 16px Roboto, sans-serif;
+  text-align: center;
 }  
 h1 {
   font-family: "Bebas Neue"}
