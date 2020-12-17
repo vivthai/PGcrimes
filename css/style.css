@@ -107,6 +107,36 @@ color:white
 #list > li:hover{
       background-color: #eee;
 }
+
+
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid black;
+}
+
+
+.mainPageImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+
+}
+.mainImage {
+  height: auto;
+  width: 30%;
+ 
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  color:black;
+}
 /*
 .searchbar{
   margin-top:25px;
