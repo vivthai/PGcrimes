@@ -1,0 +1,64 @@
+.title {
+    font-family: "Bebas Neue";
+}
+
+p{
+    display: block;
+    margin-inline-start: 40px;
+}
+
+
+
+
+.main {
+    border: 1px solid rgb(57, 27, 165);
+    line-height: 1.5;
+    background-color: rgb(243, 166, 166);
+    max-width: 1000px;
+    margin: auto;
+}
+
+.wrapper{
+    border: 1px solid red;
+    padding: 5%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+
+
+.name {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*p {
+    position: relative;
+    left: 30px;
+}
+*/ 
+
+.teamwrap{
+    border: 1px solid rgb(37, 116, 40);
+    padding: 5%;
+
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+}
+img {
+    vertical-align:middle;
+    margin:50px 0px;
+    border-radius: 50%;
+    max-width: 200px;
+    height: 200px;
+    filter: grayscale(100%);
+}
+
+ul {
+
+}
+
+ul {
+    list-style-type: none;
+}
