@@ -1,17 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-
-
 //let busRouteURL = "https://api.umd.io/v0/bus/routes"
-
+//let busRouteURL = "https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json?$where=date%20between%20%272020-01-01%27%20and%20%272020-02-01%27"
+let busRouteURL = "https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json"
 fetch(busRouteURL)
     .then((response) => {
         return response.json();
@@ -38,13 +27,6 @@ fetch(busRouteURL)
         //     }
         // }
 
-        // YOUR CODE HERE
-        // sessionStorage.setItem("title", route.title);
-        // sessionStorage.setItem("lat_max", route.lat_max);
-        // sessionStorage.setItem("lat_min", route.lat_min);
-        // sessionStorage.setItem("lon_max", route.lon_max);
-        // sessionStorage.setItem("lon_min", route.lon_min);
-
     })
     .catch((err) => {
         console.log(err);
@@ -57,40 +39,67 @@ const routeArray = [];
 
 fetch(busRouteURL)
     .then(blob => blob.json())
-    .then(data => routeArray.push(...data))
-
+    .then(data => {
+        for (i = 0; i < data.length; i++) {
+            if (typeof data[i].street_address != "undefined") {
+                //console.log("good");
+                routeArray.push(data[i]);
+            }
+            else {
+                console.log("id: " + i);
+            }
+        }
+        console.log(routeArray.length);
+    })
 function findMatches(wordToMatch, arr) {
     return arr.filter(item => {
         const regex = new RegExp(wordToMatch, 'gi');
-        return item.title.match(regex)
+        return item.street_address.match(regex) || item.clearance_code_inc_type.match(regex)
 
 
     });
 }
 
-function displayMatches(){
-    //if(document.querySelector('.searchTask').value != ""){
-    suggestions.innerHTML = "<tr><th>Route ID</th><th>Title</th></tr>";
-    const matchArray = findMatches(this.value, routeArray);
-    const html = matchArray.map(mission =>{
-      //const regex = new RegExp(this.value, 'gi');
-      //const missionName = mission.taskName.replace(regex, `<span class="highlight">${this.value}</span>`);
-      return `
+function displayMatches() {
+    //if(document.querySelector('#searchin').value != ""){
+    suggestions.innerHTML = "<tr><th>Case ID</th><th>Date</th><th>Crime Type</th><th>Street Address</th></tr>";
+    const monthNames = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.",
+    "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
+    const matchArray = findMatches(searchInput.value, routeArray);
+    const html = matchArray.map(mission => {
+        let date = new Date(mission.date)
+
+        //const regex = new RegExp(this.value, 'gi');
+        //const missionName = mission.taskName.replace(regex, `<span class="highlight">${this.value}</span>`);
+        return `
         <tr>
-            <td>${mission.route_id}</td>
-            <td>${mission.title}</td>
+            <td>${mission.incident_case_id}</td>
+            <td>${monthNames[date.getMonth()] +" "+ date.getDate() +" "+ date.getFullYear()}</td>
+            <td>${mission.clearance_code_inc_type}</td>
+            <td>${mission.street_address}</td>
         </tr>
       `;
     }).join('');
     suggestions.innerHTML += html;
+}
+//else{
+// suggestions.innerHTML = "";
+//}
+//}
+
+const searchInput = document.querySelector('#searchin');
+const suggestions = document.querySelector('.suggestions');
+const searchBtn = document.querySelector('#btngo');
+
+//searchInput.addEventListener('change', displayMatches);
+//searchInput.addEventListener('keyup', displayMatches);
+searchBtn.addEventListener('click', displayMatches);
+searchInput.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("btngo").click();
     }
-    //else{
-     // suggestions.innerHTML = "";
-    //}
-  //}
-  
-  const searchInput = document.querySelector('.searchTask');
-  const suggestions = document.querySelector('.suggestions');
-  
-  searchInput.addEventListener('change', displayMatches);
-  searchInput.addEventListener('keyup', displayMatches);
+  }); 
