@@ -1,6 +1,13 @@
-.title, h1 {
+.title {
     font-family: "Bebas Neue";
+    margin-bottom: -5px;
 }
+.intro {
+  margin-left: 50px;
+  font: 16px Roboto, sans-serif;
+}  
+h1 {
+  font-family: "Bebas Neue"}
 
 .wrapper p{
     display: block;
@@ -8,16 +15,13 @@
 }
 
 
-.main {
-    border: 1px solid rgb(57, 27, 165);
+.main {    
     line-height: 1.5;
-    background-color: rgb(243, 166, 166);
     max-width: 1000px;
     margin: auto;
 }
 
 .wrapper{
-    border: 1px solid red;
     padding: 5%;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
@@ -28,7 +32,7 @@
 }
 
 .team{
-    border: 1px solid rgb(37, 116, 40);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     padding: 5%;
 }
 
@@ -55,9 +59,6 @@ ul{
     list-style-type: none;
 }
 
-* {
-    font-family: Roboto;
-  }
 .footer-distributed {
   background-color: #292c2f;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
