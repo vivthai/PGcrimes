@@ -1,3 +1,14 @@
+@media only screen and (max-width: 767px) {
+    p.a {
+        margin-left: 0 !important;
+        text-align: center;
+    }
+    h1 {
+        margin-left: 0px !important;
+        text-align: center;
+    }
+}
+            
 table, th, td {
     border: 1px solid black;
   }
@@ -13,24 +24,17 @@ table, th, td {
   a:link {
     text-decoration: none;
     color:#155E58;
-
   }
-  
   a:visited {
     text-decoration: none;
     color:#155E58;
   }
-  
   a:hover {
     color:white;
   }
-  
   a:active {
     color:white;
   }
-
-
-
 
   body{
     font-size: 14pt;
@@ -43,13 +47,11 @@ table, th, td {
     text-align: center; 
     margin-top: 50px;
 }
-
 #searchin{
     float: left;
     width: 90%; 
     height: 30px;
 }
-
 #btngo{
     float: left;
     width: 10%; 
@@ -59,7 +61,6 @@ table, th, td {
     border: none;
     font-weight: bold;
 }
-
 #list{
      padding: 0;
      list-style-type: none;
@@ -72,13 +73,11 @@ table, th, td {
      overflow: hidden;
      overflow-y: scroll;
 }
-
 #list > li{
      text-align: left;
      padding: 5px;
      display: none;
 }
-
 #list > li:hover{
       background-color: #eee;
 }
@@ -120,7 +119,13 @@ section{
     justify-content: center;
     flex-direction: column;
 }
-
+.title{
+    margin-bottom: -5px;
+}
+p.a {
+    margin-left: 50px;
+    font: 16px Roboto, sans-serif;
+  }  
 .container{
     width: 90%;
     max-width: 500px;
@@ -139,8 +144,8 @@ section{
 .form-group input,
 .form-group textarea{
     width: 100%;
-    padding: 5px;
-    font-size: 18px;
+    padding: 4px;
+    font-size: 16px;
     border: 1px solid rgba(128, 128, 128, 0.199);
     margin-top: 5px;
 }
@@ -151,7 +156,7 @@ button[type="submit"]{
     width: 100%;
     border: none;
     outline: none;
-    padding: 20px;
+    padding: 15px;
     font-size: 24px;
     border-radius: 8px;
     font-family: "Bebas Neue";
@@ -162,7 +167,7 @@ button[type="submit"]{
     transition: .3s ease background;
 }
 button[type="submit"]:hover{
-    background-color: rgb(214, 226, 236);
+    background-color: #a8e4a0;
 }
 
 /* #status{
