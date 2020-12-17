@@ -108,13 +108,11 @@ section{
     justify-content: center;
     flex-direction: column;
 }
-.contactsum{
-    margin-left: 50px;
-}
 .title{
     margin-bottom: -5px;
 }
 p.a {
+    margin-left: 50px;
     font: 16px Roboto, sans-serif;
   }  
 .container{
