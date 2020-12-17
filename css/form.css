@@ -1,3 +1,14 @@
+@media only screen and (max-width: 767px) {
+    p.a {
+        margin-left: 0 !important;
+        text-align: center;
+    }
+    h1 {
+        margin-left: 0px !important;
+        text-align: center;
+    }
+}
+            
 table, th, td {
     border: 1px solid black;
   }
