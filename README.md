@@ -14,7 +14,7 @@ With PGcrimes, users can see navigate accurate and organized PG County crime via
  
  
  # Manual Links
- [User Manual](#user Manual)
+ [User Manual](#User Manual)
  # Developer Manual
 
 #
