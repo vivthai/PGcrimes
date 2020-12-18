@@ -1,5 +1,5 @@
 body{
-    font-family: "Bebas Neue";
+    font-family: "Helvetica";
 }
 section{
     height: 100vh;
@@ -16,7 +16,7 @@ section{
 }
 p.a {
     margin-left: 50px;
-    font: 16px Roboto, sans-serif;
+    font: 16px Helvetica;
     text-align: center;
   }  
 .container{
@@ -25,7 +25,7 @@ p.a {
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0px 0px 20px #00000010;
-    background-color: #ffffff;
+    background-color: #D0EEDF;
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -40,6 +40,7 @@ p.a {
     padding: 4px;
     font-size: 16px;
     border: 1px solid rgba(128, 128, 128, 0.199);
+    background-color: #ffffff;
     margin-top: 5px;
 }
 textarea{
@@ -52,8 +53,9 @@ button[type="submit"]{
     padding: 15px;
     font-size: 24px;
     border-radius: 8px;
-    font-family: "Bebas Neue";
+    font-family: "Helvetica";
     color: rgb(0, 0, 0);
+    background-color: #7ae0c7;
     text-align: center;
     cursor: pointer;
     margin-top: 10px;
@@ -61,6 +63,7 @@ button[type="submit"]{
     transition: .3s ease background;
 }
 button[type="submit"]:hover{
-    background-color: #a8e4a0;
+    background-color: #155E58;
+    color: white;
 }
 
