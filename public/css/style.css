@@ -216,6 +216,26 @@ h1 {
   font-weight: bold;
   color:black;
 }
+
+
+button[type="submit"]{
+
+    float: left;
+    width: 50%; 
+    height: 30px;
+    background-color: #155E58;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.075)
+    
+}
+
+.filtersubmitdiv{
+
+  display: flex;
+}
 /*
 .searchbar{
   margin-top:25px;
@@ -321,11 +341,13 @@ border-bottom: 1px solid #CCC;
 
 display: flex;
 align-content: center;
+justify-content: center;
 
 }
 
 
 
-.dropdown h2 {
-  margin-left: 500px;
+h2 {
+  margin-left: 0px;
+  text-align: center;
 }
