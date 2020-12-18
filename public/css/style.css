@@ -317,3 +317,9 @@ border-bottom: 1px solid #CCC;
   }
 }
  
+.dropdown{
+
+display: flex;
+align-content: center;
+
+}
