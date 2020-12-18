@@ -1,7 +1,7 @@
 {
-  "name": "assignment_2",
+  "name": "pgcrimes",
   "version": "1.0.0",
-  "description": "Assignment 2, task list with due dates and search capability",
+  "description": "Providing a convenient way for people to search Prince George's county crimes.",
   "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
