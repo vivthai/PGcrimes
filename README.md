@@ -62,7 +62,12 @@ npm install
 Start the application server
 
 ```start
-npm start
+npm start run-watch
+```
+Type in your internet browser
+
+```localhost
+localhost:8080
 ```
 
 ## Testing 
@@ -77,7 +82,7 @@ npm test
 
 ### Endpoints
 #### PUT:
-* PUT request route is for form submissions (Contact Us!)
+* PUT requests route is for form submissions (Contact Us!)
 * PUT requests can be submitted to /api
 * PUT request must be in json form and conform to the parameters set by the database (for the form)
 * PUT requests return a conformation string or an error message once completed
@@ -86,8 +91,15 @@ npm test
 * GET requests can be retrieved from /api
 * GET request retrieve a list of JSON objects containing PG crimes information from the database
 
+#### POST:
+* POST is used to send data to our server to update our database(Data page).
+
 # Known BUGS
 * The website has **No** security, so do not put any sensitive information
-* 
+* We were not able to let the user choose the date that he wants for the home page search. 
+
 # Future Development
+* Add more security and error checking to form submissions
+* Add a filtering option for the home page
+* Offer more and different options to the user to search using different dates. 
 
