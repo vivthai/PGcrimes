@@ -1,4 +1,4 @@
-[ PGcrimes)
+# PGcrimes
 
 Application by Team3: Vivian Thai, Chopa Zamir, Yao Poudima, Yuming Huang, Audrey Tsang
 
@@ -15,5 +15,5 @@ With PGcrimes, users can see navigate accurate and organized PG County crime via
  
  # Manual Links
  
- [User Manual)
- [Developer Manual)
+ [User Manual]
+ [Developer Manual]
