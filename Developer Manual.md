@@ -26,12 +26,12 @@ npm install
 This installs:
 * Bulma - CSS framework
 * Express - Node.js server framework
-..* mocha - JavaScript test framework
-..* sqlite, sqlite3 - SQL database backend
-..* babel - Access ES6+ JavaScript features
-..* node-fetch - Access fetch API
-..* nodemon - Restart node server while coding changes
-..* flatpickr - Datetime picker
-..* heatmap.js, leaflet-heatmap - Leaflet heatmap plugin
-..* autoprefixer, node-sass, postcss-cli - Edit and save Sass files
-..* npm-run-all - Run multiple npm scripts
+* Mocha - JavaScript test framework
+* Sqlite, sqlite3 - SQL database backend
+* Babel - Access ES6+ JavaScript features
+* Node-fetch - Access fetch API
+* Nodemon - Restart node server while coding changes
+* Flatpickr - Datetime picker
+* Heatmap.js, leaflet-heatmap - Leaflet heatmap plugin
+* Autoprefixer, node-sass, postcss-cli - Edit and save Sass files
+* Npm-run-all - Run multiple npm scripts
