@@ -1,0 +1,23 @@
+{
+  "name": "assignment_2",
+  "version": "1.0.0",
+  "description": "Assignment 2, task list with due dates and search capability",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start-watch": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "PG Crime",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.0"
+  }
+}

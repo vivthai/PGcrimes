@@ -103,3 +103,27 @@ searchInput.addEventListener("keyup", function(event) {
       document.getElementById("btngo").click();
     }
   }); 
+
+//check if the search is a crimType in database
+    let url = "/allResults"
+    const crimeTypeArray = [];
+
+    fetch(url)
+        .then(blob => blob.json())
+        .then(data => crimeTypeArray.push(...data.data))
+//return an array
+function check(type, arr) {
+    // return arr.filter(item => {
+    //     const regex = new RegExp(type, 'gi');
+    // return item.crimeType.match(regex)
+    let filtered = arr.filter(a => a.crimeType == type);
+    //console.log(filtered);
+    return filtered;
+    //});
+}
+
+
+
+/***************UPDATE Search Results******************** */ 
+
+  
