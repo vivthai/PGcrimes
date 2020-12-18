@@ -323,3 +323,9 @@ display: flex;
 align-content: center;
 
 }
+
+
+
+.dropdown h2 {
+  margin-left: 500px;
+}
