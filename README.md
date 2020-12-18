@@ -18,4 +18,8 @@ With PGcrimes, users can see navigate accurate and organized PG County crime via
  
  [Developer Manual](https://github.com/vivthai/PGcrimes/blob/main/Developer%20Manual)
 
-#
+# Known BUGS
+* The website has * No* security, so do not put any sensitive information
+*
+# Future Development
+
