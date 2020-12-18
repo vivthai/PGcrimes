@@ -8,7 +8,8 @@ Have an up-to-date version of Node.js: (https://nodejs.org/)
 
 Clone this repository using your favorite shell
 
-```https://github.com/vivthai/PGcrimes.git
+```github
+https://github.com/vivthai/PGcrimes.git
 ```
 
 
@@ -18,5 +19,6 @@ Clone this repository using your favorite shell
 
 While inside the application directory, install all node dependencies
 
-```npm install
+```npm
+npm install
 ```
