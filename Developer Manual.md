@@ -4,7 +4,7 @@
 
 #### Getting started
 
-Have an up-to-date version of Node.js:(https://nodejs.org/)
+Have an up-to-date version of Node.js: (https://nodejs.org/)
 
 Clone this repository using your favorite shell
 
@@ -12,3 +12,9 @@ Clone this repository using your favorite shell
 
 
 ### OR use GitHub Desktop
+
+#### Dependencies
+
+While inside the application directory, install all node dependencies
+
+`npm install`
