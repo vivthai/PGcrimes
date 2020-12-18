@@ -9,7 +9,7 @@ With PGcrimes, users can see navigate accurate and organized PG County crime via
  # PGcrimes Heroku Site
  
  
- # Browsers
+ # Supported Browsers
  
  
  
