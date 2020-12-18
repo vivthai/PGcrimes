@@ -88,3 +88,52 @@ window.onload = async function makeChart() {
 function show() {
     document.getElementById("requestInput").style.display = "block";
 }
+
+
+/**********add new crimeType********** */
+function submitNewCrimeType() {
+
+    console.log("Called submitNewCrimeType");
+    let crimeType = document.getElementById("crimeInput").value;
+    if(crimeType != ""){
+    crimeType = crimeType.toLowerCase();
+    console.log("crimeInput:" + crimeType);
+    data = { 'crimeType': crimeType };
+  
+    //console.log(JSON.stringify(data))
+    let resultURL = "/result";
+    const fetchPromise = fetch(resultURL, {
+      method: 'POST', headers: {
+        'Content-Type': 'application/json'
+  
+      }, body: JSON.stringify(data)
+    });
+  
+    let outcomeId;
+    fetchPromise
+      .then((response) => {
+        return response.json();
+      })
+      .then((outcome) => {
+        console.log("Here POST crimeType");
+        console.log(outcome);
+  
+        let message = "ERROR";
+        if (typeof outcome.id !== "undefined") {
+          crimeType = outcome.data.crimeType;
+          outcomeId = outcome.id;
+          searchNum = outcome.data.searchNum;
+          message = "Message: " + outcome.message + " please refresh the page to see the result."
+          "<br>crimeTypeId: " + outcomeId + " crimeType: " + crimeType + "<br> ";
+        }
+        else if(typeof outcome !== "undefined"){
+          message = "Message: " + outcome.message ;
+        }
+        document.getElementById("postCrimeTypeContent").innerHTML = message;
+      })
+      .catch((err) => {
+        console.log(err);
+        document.getElementById("postCrimeTypeContent").innerHTML = "Invalid crimeType : " + data.crimeType;
+      });
+    }
+  }

@@ -1,6 +1,6 @@
 //let busRouteURL = "https://api.umd.io/v0/bus/routes"
-//let busRouteURL = "https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json?$where=date%20between%20%272020-01-01%27%20and%20%272020-02-01%27"
-let busRouteURL = "https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json"
+let busRouteURL = "https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json?$where=date%20between%20%272020-01-01%27%20and%20%272020-02-01%27"
+//let busRouteURL = "https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json"
 fetch(busRouteURL)
     .then((response) => {
         return response.json();
@@ -61,14 +61,14 @@ function findMatches(wordToMatch, arr) {
 }
 
 function displayMatches() {
-    //if(document.querySelector('#searchin').value != ""){
+    if(document.querySelector('#searchin').value != ""){
     suggestions.innerHTML = "<tr><th>Case ID</th><th>Date</th><th>Crime Type</th><th>Street Address</th></tr>";
     const monthNames = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.",
         "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
     const matchArray = findMatches(searchInput.value, routeArray);
 
     //check if the input is in results database
-    checkForUpdate(searchInput.value, crimeTypeArray);
+    checkForUpdate(searchInput.value.toLowerCase(), crimeTypeArray);
 
 
     const html = matchArray.map(mission => {
@@ -87,10 +87,10 @@ function displayMatches() {
     }).join('');
     suggestions.innerHTML += html;
 }
-//else{
-// suggestions.innerHTML = "";
-//}
-//}
+else{
+suggestions.innerHTML = "";
+}
+}
 
 const searchInput = document.querySelector('#searchin');
 const suggestions = document.querySelector('.suggestions');
