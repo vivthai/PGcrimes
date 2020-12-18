@@ -51,25 +51,113 @@ fetch(busRouteURL)
         }
         console.log(routeArray.length);
     })
-function findMatches(wordToMatch, arr) {
-    return arr.filter(item => {
-        const regex = new RegExp(wordToMatch, 'gi');
-        return item.street_address.match(regex) || item.clearance_code_inc_type.match(regex)
+// function findMatches(wordToMatch, arr) {
+//     return arr.filter(item => {
+//         const regex = new RegExp(wordToMatch, 'gi');
+//         return item.street_address.match(regex) || item.clearance_code_inc_type.match(regex)
 
 
-    });
-}
+//     });
+// }
+
+// function displayMatches() {
+//     if((document.getElementById("crimes").value != 0) && searchInput.value === ""){ //drop down but no search
+
+//     }
+//     //if(document.querySelector('#searchin').value != ""){
+//     suggestions.innerHTML = "<tr><th>Case ID</th><th>Date</th><th>Crime Type</th><th>Street Address</th></tr>";
+//     const monthNames = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.",
+//         "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
+//     const matchArray = findMatches(searchInput.value, routeArray);
+
+//     //check if the input is in results database
+//     checkForUpdate(searchInput.value.toLowerCase(), crimeTypeArray);
+
+
+//     const html = matchArray.map(mission => {
+//         let date = new Date(mission.date)
+
+//         //const regex = new RegExp(this.value, 'gi');
+//         //const missionName = mission.taskName.replace(regex, `<span class="highlight">${this.value}</span>`);
+//         return `
+//         <tr>
+//             <td>${mission.incident_case_id}</td>
+//             <td>${monthNames[date.getMonth()] + " " + date.getDate() + " " + date.getFullYear()}</td>
+//             <td>${mission.clearance_code_inc_type}</td>
+//             <td>${mission.street_address}</td>
+//         </tr>
+//       `;
+//     }).join('');
+//     suggestions.innerHTML += html;
+// }
+// // else{
+// // suggestions.innerHTML = "";
+// // }
+// // }
 
 function displayMatches() {
-    if(document.querySelector('#searchin').value != ""){
+    if((dropdownInput.value != 0) && searchInput.value === ""){ //yes drop down but no search
+        function findMatches(wordToMatch, arr) {
+            return arr.filter(item => {
+                const regex = new RegExp(wordToMatch, 'gi');
+                return item.clearance_code_inc_type.match(regex)
+            });
+        }
+        const matchArray = findMatches(dropdownInput.value, routeArray);
+        getResultTable(matchArray);
+        
+        //check if the input is in results database
+        checkForUpdate(dropdownInput.value.toLowerCase(), crimeTypeArray);
+    }
+
+    else if(dropdownInput.value == 0 && searchInput.value != ""){ //no drop down but yes search
+        function findMatches(wordToMatch, arr) {
+            return arr.filter(item => {
+                const regex = new RegExp(wordToMatch, 'gi');
+                return item.street_address.match(regex)
+        
+        
+            });
+        }
+        const matchArray = findMatches(searchInput.value, routeArray);
+        getResultTable(matchArray);
+    }
+
+    else if(dropdownInput.value != 0 && searchInput.value != ""){ //yes drop down AND yes search
+        function findMatches(crimeType, streetName, arr) {
+            return arr.filter(item => {
+                const regex1 = new RegExp(crimeType, 'gi');
+                const regex2 = new RegExp(streetName, 'gi');
+                return item.clearance_code_inc_type.match(regex1) && item.street_address.match(regex2)
+            });
+        }
+        const matchArray = findMatches(dropdownInput.value, searchInput.value,routeArray);
+        getResultTable(matchArray);
+        //check if the input is in results database
+        checkForUpdate(dropdownInput.value.toLowerCase(), crimeTypeArray);
+    }
+
+    else if(dropdownInput.value == 0 && searchInput.value == ""){ //no drop down and no search
+        function findMatches(wordToMatch, arr) {
+            return arr.filter(item => {
+                const regex = new RegExp(wordToMatch, 'gi');
+                return item.street_address.match(regex)
+            });
+        }
+        const matchArray = findMatches(searchInput.value, routeArray);
+        getResultTable(matchArray);
+    }
+    //if(document.querySelector('#searchin').value != ""){
+    
+}
+
+function getResultTable(matchArray){
     suggestions.innerHTML = "<tr><th>Case ID</th><th>Date</th><th>Crime Type</th><th>Street Address</th></tr>";
     const monthNames = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.",
         "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
-    const matchArray = findMatches(searchInput.value, routeArray);
+    
 
-    //check if the input is in results database
-    checkForUpdate(searchInput.value.toLowerCase(), crimeTypeArray);
-
+    console.log("match lenght:" + matchArray.length);
 
     const html = matchArray.map(mission => {
         let date = new Date(mission.date)
@@ -83,18 +171,16 @@ function displayMatches() {
             <td>${mission.clearance_code_inc_type}</td>
             <td>${mission.street_address}</td>
         </tr>
-      `;
+        `;
     }).join('');
     suggestions.innerHTML += html;
 }
-else{
-suggestions.innerHTML = "";
-}
-}
+
 
 const searchInput = document.querySelector('#searchin');
 const suggestions = document.querySelector('.suggestions');
 const searchBtn = document.querySelector('#btngo');  // click go button
+const dropdownInput = document.getElementById("crimes");
 
 //searchInput.addEventListener('change', displayMatches);
 //searchInput.addEventListener('keyup', displayMatches);
@@ -156,3 +242,24 @@ function checkForUpdate(type, arr) {
 }
 
 
+/***********drop down box*********** */
+let crimeValues = [];
+let settings = { method: "Get" };
+
+async function getPageData() {
+  await fetch('./allResults', settings)
+    .then(res => res.json())
+    .then((json) => {
+      let listSize = json.data.length;
+      json.data.forEach(element => {
+        let optionTag = document.createElement("option");   // Create a <option> element
+        optionTag.innerHTML = element.crimeType;       // Insert text
+        optionTag.setAttribute("value", element.crimeType);
+        document.getElementById("crimes").appendChild(optionTag);          // Append <option> to select
+      });
+    })
+};
+
+window.onload = async function loadPage() {
+    getPageData();
+}
