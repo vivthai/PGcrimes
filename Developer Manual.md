@@ -24,8 +24,8 @@ npm install
 ```
 
 This installs:
-..* bulma - CSS framework
-..* express - Node.js server framework
+* Bulma - CSS framework
+* Express - Node.js server framework
 ..* mocha - JavaScript test framework
 ..* sqlite, sqlite3 - SQL database backend
 ..* babel - Access ES6+ JavaScript features
