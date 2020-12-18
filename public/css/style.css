@@ -20,6 +20,8 @@ th,td{
   
   padding: 15px;
   text-align: center;
+  word-wrap: break-word;
+    max-width:0;
 }
 /*  add id="t01" to table tag for the next three things to work  *
 #t01 tr:nth-child(even) {
@@ -290,7 +292,7 @@ border-bottom: 1px solid #CCC;
 .footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
 .footer-distributed p.footer-links a:hover{text-decoration:underline;}
 
-/* Media but not such we need this 
+/* Media but not such we need this */
 
 @media (max-width: 600px) {
   .footer-distributed .footer-left, .footer-distributed .footer-right {
@@ -304,4 +306,4 @@ border-bottom: 1px solid #CCC;
     line-height: 1.8;
   }
 }
- */
+ 
