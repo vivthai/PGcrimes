@@ -1,4 +1,4 @@
-# PGcrimes Developer Manual
+# PGcrime Developer Manual
  
 ## Installation
 
