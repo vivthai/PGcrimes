@@ -5,12 +5,30 @@
     }
   }
   
-  .para{
-
+  .para {
     font-family: helvetica;
-    
+    font-weight: bold;
+    text-align: center;
     }
+
+  #addTypebtn{
+    align-items: center;
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 50px;
+ 
+  }
   
+
+
+  #crimeInput{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 700px;
+    padding: 5px;
+  }
+
   table, th, td {
       border: 1px solid black;
   
