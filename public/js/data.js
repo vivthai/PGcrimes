@@ -83,3 +83,8 @@ window.onload = async function makeChart() {
 }
 
 //window.onload = makeChart();
+
+/**********show textbox after link clicked************ */
+function show() {
+    document.getElementById("requestInput").style.display = "block";
+}
