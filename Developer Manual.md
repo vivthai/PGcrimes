@@ -1,6 +1,6 @@
 # PGcrimes Developer Manual
  
-### Installations
+## Installation
 
 #### Getting started
 
@@ -10,5 +10,5 @@ Clone this repository using your favorite shell
 
 `https://github.com/vivthai/PGcrimes.git`
 
-### OR
-use GitHub Desktop
+
+### OR use GitHub Desktop
