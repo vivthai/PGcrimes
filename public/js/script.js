@@ -64,8 +64,13 @@ function displayMatches() {
     //if(document.querySelector('#searchin').value != ""){
     suggestions.innerHTML = "<tr><th>Case ID</th><th>Date</th><th>Crime Type</th><th>Street Address</th></tr>";
     const monthNames = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.",
-    "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
+        "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
     const matchArray = findMatches(searchInput.value, routeArray);
+
+    //check if the input is in results database
+    checkForUpdate(searchInput.value, crimeTypeArray);
+
+
     const html = matchArray.map(mission => {
         let date = new Date(mission.date)
 
@@ -74,7 +79,7 @@ function displayMatches() {
         return `
         <tr>
             <td>${mission.incident_case_id}</td>
-            <td>${monthNames[date.getMonth()] +" "+ date.getDate() +" "+ date.getFullYear()}</td>
+            <td>${monthNames[date.getMonth()] + " " + date.getDate() + " " + date.getFullYear()}</td>
             <td>${mission.clearance_code_inc_type}</td>
             <td>${mission.street_address}</td>
         </tr>
@@ -89,41 +94,65 @@ function displayMatches() {
 
 const searchInput = document.querySelector('#searchin');
 const suggestions = document.querySelector('.suggestions');
-const searchBtn = document.querySelector('#btngo');
+const searchBtn = document.querySelector('#btngo');  // click go button
 
 //searchInput.addEventListener('change', displayMatches);
 //searchInput.addEventListener('keyup', displayMatches);
 searchBtn.addEventListener('click', displayMatches);
-searchInput.addEventListener("keyup", function(event) {
+searchInput.addEventListener("keyup", function (event) {
     // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
-      // Cancel the default action, if needed
-      event.preventDefault();
-      // Trigger the button element with a click
-      document.getElementById("btngo").click();
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("btngo").click();
     }
-  }); 
+});
 
 //check if the search is a crimType in database
-    let url = "/allResults"
-    const crimeTypeArray = [];
+let url = "/allResults"
+const crimeTypeArray = [];
 
-    fetch(url)
-        .then(blob => blob.json())
-        .then(data => crimeTypeArray.push(...data.data))
+fetch(url)
+    .then(blob => blob.json())
+    .then(data => crimeTypeArray.push(...data.data))
 //return an array
-function check(type, arr) {
+function checkForUpdate(type, arr) {
     // return arr.filter(item => {
     //     const regex = new RegExp(type, 'gi');
     // return item.crimeType.match(regex)
     let filtered = arr.filter(a => a.crimeType == type);
     //console.log(filtered);
-    return filtered;
+    //*********return filtered;
     //});
+
+    if (filtered.length != 0) {
+        let isInDb = filtered[0];
+        console.log(JSON.stringify(isInDb))
+        
+        let taskURL = "/result?typeId=" + isInDb.id;
+
+        const fetchPromise = fetch(taskURL, {
+            method: 'PUT', headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            }, body: JSON.stringify(isInDb)
+        });
+
+        fetchPromise
+            .then((response) => {
+                return response.json();
+            })
+            .then((change) => {
+                console.log("Here Update");
+                console.log("update: "+change.message + " "+ change.changes + " changes");
+                console.log(change.data);
+            })
+            .catch((err) => {
+                console.log(err);
+                //document.getElementById("updatedTaskContent").innerHTML = "Invalid task id: " + updateTaskId;
+            });
+    }
 }
 
 
-
-/***************UPDATE Search Results******************** */ 
-
-  

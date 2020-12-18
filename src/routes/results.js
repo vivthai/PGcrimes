@@ -42,53 +42,36 @@ resultsRouter.get('/result', (req, res) => {
 })
 
 //Update
-/*
-data = { 'taskId': updateTaskId,
-'taskName':updateTaskName,
-'taskFirstName':updateTaskFirstName,
-'taskGroup':updateTaskGroup,
-'taskDueDate':updateTaskDueDate,
-'taskComplete':updateTaskComplete };
-*/
-// router.put('/task', (req, res) => {
-//   console.log("PUT called")
-//   var data = {
-//       id : req.query.taskId, // **Note that I'm pulling this from the 'query' vs the 'body'
-//       taskName: req.body.taskName,
-//       personId :  req.body.taskFirstName,
-//       groupId :  req.body.taskGroup,
-//       dueDate :  req.body.taskDueDate,
-//       priority :  req.body.taskPriority,
-//       complete :  req.body.taskComplete
-      
-//   }
-//   console.log("data.id:" + data.id + " name:" + data + " due_date:" + data.dueDate)
-//   if (!data.id) {
-//       return res.status(400).send('Missing URL parameter id')
-//   }
-//   db.run(
-//       `UPDATE tasks set 
-//          taskName = ?,
-//          dueDate = ?,
-//          groupId = ?,
-//          personId = ?,
-//          complete = ?,
-//          priority = ?
-//          WHERE id = ?`,
-//       [data.taskName, data.dueDate, data.groupId, data.personId, data.complete, data.priority, data.id],
-//       function (err, result) {
-//           if (err){
-//               res.status(400).json({"error": res.message})
-//               console.log(err);
-//               return;
-//           }
-//           res.json({
-//               message: "success",
-//               data: data,
-//               changes: this.changes
+resultsRouter.put('/result', (req, res) => {
+  console.log("PUT called")
+  var data = {
+      id : req.query.typeId, // **Note that I'm pulling this from the 'query' vs the 'body'
+      crimeType: req.body.crimeType,
+      searchNum:  req.body.searchNum + 1
+  }
+  console.log("data.id:" + data.id + " crimeType:" + data.crimeType + " searchNum:" + data.searchNum)
+  if (!data.id) {
+      return res.status(400).send('Missing URL parameter id')
+  }
+  db.run(
+      `UPDATE results set 
+         crimeType = ?,
+         searchNum = ?
+         WHERE id = ?`,
+      [data.crimeType, data.searchNum, data.id],
+      function (err, result) {
+          if (err){
+              res.status(400).json({"error": res.message})
+              console.log(err);
+              return;
+          }
+          res.json({
+              message: "success",
+              data: data,
+              changes: this.changes
               
-//           })
-//   });
-// })
+          })
+  });
+})
 
 module.exports = resultsRouter
