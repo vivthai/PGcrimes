@@ -17,13 +17,13 @@ git clone https://github.com/vivthai/PGcrimes.git
 
 #### Dependencies
 
-While inside the application directory, install all node dependencies
+ Install all node dependencies inside the application directory
 
 ```npm
 npm install
 ```
 
-This installs:
+ Npm packages include:
 * Bulma - CSS framework
 * Express - Node.js server framework
 * Mocha - JavaScript test framework
@@ -35,3 +35,36 @@ This installs:
 * Heatmap.js, leaflet-heatmap - Leaflet heatmap plugin
 * Autoprefixer, node-sass, postcss-cli - Edit and save Sass files
 * Npm-run-all - Run multiple npm scripts
+
+## Deployment
+
+Start the application server
+
+```start
+npm start
+```
+
+## Testing 
+
+In the main repository directory:
+
+```test
+npm test
+```
+
+## Server API
+
+### Endpoints
+## PUT:
+* PUT request route is for form submissions (Contact Us!)
+* PUT requests can be submitted to /api
+* PUT request must be in json form and conform to the parameters set by the database (for the form)
+* PUT requests return a conformation string or an error message once completed
+
+## GET:
+* GET requests can be retrieved from /api
+* GET request retrieve a list of JSON objects containing PG crimes information from the database
+
+## Known BUGS
+* The website has * No* security, so do not put any sensitive information
+*
