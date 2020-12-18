@@ -345,9 +345,16 @@ justify-content: center;
 
 }
 
-
-
-h2 {
+.h1 {
   margin-left: 0px;
   text-align: center;
+}
+
+.h2{
+  margin-left: 0px;
+  text-align: center;
+}
+
+.filtersubmitdiv{
+  margin-left: 100px;
 }
