@@ -65,7 +65,3 @@ npm test
 * GET requests can be retrieved from /api
 * GET request retrieve a list of JSON objects containing PG crimes information from the database
 
-## Known BUGS
-* The website has * No* security, so do not put any sensitive information
-*
-## Future Development
