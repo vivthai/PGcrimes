@@ -1,0 +1,370 @@
+@media only screen and (max-width: 767px) {
+    p.a, h1, .intro {
+        margin-left: 0 !important;
+        text-align: center;
+    }
+  }
+  
+  .para{
+
+    font-family: helvetica;
+    
+    }
+  
+  table, th, td {
+      border: 1px solid black;
+  
+      border-collapse: collapse;
+      
+    }
+  
+  th,td{
+    
+    padding: 15px;
+    text-align: center;
+    word-wrap: break-word;
+      max-width:0;
+  }
+  /*  add id="t01" to table tag for the next three things to work  *
+  #t01 tr:nth-child(even) {
+    background-color: #eee;
+  }
+  #t01 tr:nth-child(odd) {
+   background-color: #fff;
+  }
+  #t01 th {
+    background-color: black;
+    color: white;
+  }*/
+  
+  .suggestions tr:nth-child(even) {
+    /*background-color: #eee;
+    background-color:#b4e4cc9f 
+    background-color:rgba(128, 128, 128, 0.329);*/
+    
+    background-color:#b4e4cc9f ;
+  }
+  .suggestions tr:nth-child(odd) {
+   /*background-color: #fff;
+   background-color: #e0937967;
+   background-color: #ff431459;
+   background-color:#b4e4cc5e*/
+   
+   background-color: #ff431459;
+  }
+  .suggestions th {
+    /*background-color: #7ae0c7;*/
+    background-color: #7ae0c7;
+    color: black;
+    font-family: helvetica;
+  }
+  
+  .nav {
+      display: flex;
+      flex-direction: row;
+      background-color: #7ae0c7;
+      /*font-family: 'Bebas Neue', cursive;
+      font-family: Helvetica, sans-serif;*/
+      font-family: Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 120%;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+      justify-content: space-between;
+    }
+  
+    .menu{
+  
+      display: flex;
+      flex-direction: row;
+      flex-wrap:wrap;
+      margin-top: auto;
+    }
+  
+    .nav .navlogo{
+      display: flex;
+      flex-direction: row;
+      flex-wrap:wrap;
+  
+    width: 150px;
+    height: auto;
+    margin: 20px;
+      
+    
+  
+    }
+    a:link {
+      
+      color:#155E58;
+  
+    }
+    
+    a:visited {
+     
+      color:#155E58;
+    }
+    
+    a:hover {
+      color:white;
+    }
+    
+    a:active {
+      color:white;
+    }
+  .addToGraphText{
+
+color:black;
+
+
+  }
+
+
+    .nav .highlightCurrentPage {
+  
+  color:white
+  
+    }
+  
+  .title{
+    margin-left: 50px;
+  
+  }
+  
+    body{
+      font-size: 14pt;
+  }
+  
+  #search{
+      width: 80%; 
+      margin: auto; 
+      display: block; 
+      text-align: center; 
+      margin-top: 50px;
+      
+      
+  }
+  
+  #searchin{
+      float: left;
+      width: 90%; 
+      height: 30px;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+      border-radius: 5px;
+      border-width: thin;
+      border-color: #155E58;
+      margin-bottom: 30px;
+  }
+  
+  #btngo{
+      float: left;
+      width: 10%; 
+      height: 30px;
+      background-color: #155E58;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.075)
+  }
+  
+  #list{
+       padding: 0;
+       list-style-type: none;
+       display: none; 
+       position: absolute; 
+       z-index: 9999; 
+       width: 80%; 
+       margin-top: 30px;
+       max-height: 120px;
+       overflow: hidden;
+       overflow-y: scroll;
+  }
+  
+  #list > li{
+       text-align: left;
+       padding: 5px;
+       display: none;
+  }
+  
+  #list > li:hover{
+        background-color: #eee;
+  }
+  
+  
+  
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-top:100px;
+   
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5px;
+    border-width: thin;
+    border-color: #155E58;
+  }
+  
+  
+  .mainPageImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  
+  
+  }
+  .mainImage {
+    height: auto;
+    width: 30%;
+   
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color:black;
+  }
+  
+  
+  button[type="submit"]{
+  
+      float: left;
+      width: 50%; 
+      height: 30px;
+      background-color: #155E58;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.075)
+      
+  }
+  
+  .filtersubmitdiv{
+  
+    display: flex;
+  }
+  /*
+  .searchbar{
+    margin-top:25px;
+   margin-left:283px;
+   width:100%;
+  }
+  .bar{
+    border-radius:0;
+    box-shadow: 2px 3px 0px -2px #ccc;
+    padding:10px;
+    border:0px;
+    outline: none;
+    border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #CCC;
+  }
+  .bar:hover{
+    box-shadow: 3px 6px 7px -3px #ccc;
+  }
+  */
+  
+  
+  
+  
+  /* style for footer*/
+  .footer-distributed {
+    background-color: #155E58;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+    padding: 45px 50px;
+    margin-top: 15%;
+    font-family: helvetica;
+  }
+  
+  .footer-distributed .footer-left p {
+    color: #8f9296;
+    font-size: 14px;
+    margin: 0;
+  }
+  /* Footer links */
+  
+  .footer-distributed p.footer-links {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+  
+  .footer-distributed p.footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "·";
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  .footer-distributed .footer-right {
+      float: right;
+      max-width: 180px;
+    }
+  
+  .footer-right img {
+      max-width: 35px;
+      height: 35px;
+  }
+  
+  .footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+  .footer-distributed p.footer-links a:hover{text-decoration:underline;}
+  
+  /* Media but not such we need this */
+  
+  @media (max-width: 600px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-right {
+      text-align: center;
+    }
+    .footer-distributed .footer-right {
+      float: none;
+      margin: 0 auto 20px;
+    }
+    .footer-distributed .footer-left p.footer-links {
+      line-height: 1.8;
+    }
+  }
+   
+  .dropdown{
+  
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  
+  }
+  
+  .h1 {
+    margin-left: 0px;
+    text-align: center;
+  }
+  
+  .h2{
+    margin-left: 0px;
+    text-align: center;
+  }
+  
+  .filtersubmitdiv{
+    margin-left: 100px;
+  }
+
