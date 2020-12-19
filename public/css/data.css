@@ -11,6 +11,11 @@
     text-align: center;
     }
 
+  #postCrimeTypeContent {
+    font-family: helvetica;
+    text-align: center;
+  }
+
   #addTypebtn{
     align-items: center;
     text-align: center;
