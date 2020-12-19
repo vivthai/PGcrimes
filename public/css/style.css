@@ -131,8 +131,20 @@ color:white
     text-align: center; 
     margin-top: 50px;
     
-    
 }
+
+#crimes{
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 3%;
+}
+
+#btngo{
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
 
 #searchin{
     float: left;
