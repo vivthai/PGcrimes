@@ -7,7 +7,7 @@ PGcrime is a web-based application created by University of Maryland students, d
 With PGcrime, users can see navigate accurate and organized PG County crime via the search and data functionality.
 
  # PGcrime Heroku Site
- 
+ https://pgcrime.herokuapp.com/
  
  # Supported Browsers
  * Google Chrome for Desktop and Mobile
