@@ -95,11 +95,13 @@ npm test
 * POST is used to send data to our server to update our database (Data page)
 
 # Known BUGS
-* The website has **No** security
-* We were not able to let the user choose the date that he wants for the home page search
+* The website has litte cybersecurity implementation
+
 
 # Future Development
-* Add more security and error checking to form submissions
+* Add more security and error checking to Contact Us form submission process
 * Add additional filtering options for the Home page
 * Offer more and different options for the user to search using different dates and other relevant crime data elements
+* Create an interactive map for users to further explore crime within Prince George's county
+* Ensure browser compatability with other main browsers such as Firefox and Internet Explorer
 
