@@ -70,14 +70,6 @@ Type in your internet browser
 localhost:4000
 ```
 
-## Testing 
-
-In the main repository directory:
-
-```test
-npm test
-```
-
 ## Server API
 
 ### Endpoints
