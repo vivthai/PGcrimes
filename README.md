@@ -73,14 +73,14 @@ localhost:4000
 ## Server API
 
 ### Endpoints
+
 #### PUT:
 * PUT requests can be submitted to /api
-* PUT request must be in json form and conform to the parameters set by the database (Contact Us form)
-* PUT requests return a conformation string or an error message once completed
 
 #### GET:
 * GET requests can be retrieved from /api
-* GET request retrieve a list of JSON objects containing PG crimes information from the database
+* GET requestS retrieve a list of JSON objects containing PG crimes information from the database
+* GET requests return a conformation string or an error message once completed
 
 #### POST:
 * POST is used to send data to our server to update our database (Data page)
