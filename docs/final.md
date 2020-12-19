@@ -22,9 +22,9 @@ Our solution to solve this problem, is by creating a way for the user to access 
 ### Technical system decision rationale:
 
 * SQLite Database
- * Used for embedded storage of our data in the back end of our system
+  * Used for embedded storage of our data in the back end of our system
 * Bar Graph (with CanvasJs)
- * Used for presentation of our data received from the search results
+  * Used for presentation of our data received from the search results
 
 ### Challenges:
 The main challenges we encountered were formatting the search bar for the best user experience and adding the filtering feature for the search results. It proved to be difficult to get results that satisfy 2 conditions. At first, we were only able to satisfy one condition. However, after more work and research we were able to help users narrow down their results.
