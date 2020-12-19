@@ -22,13 +22,19 @@ Our solution to solve this problem, is by creating a way for the user to access 
 ### Technical system decision rationale:
 
 * SQLite Database
-* Used for embedded storage of our data in the back end of our system
-
+ * Used for embedded storage of our data in the back end of our system
+* Bar Graph (with CanvasJs)
+ * Used for presentation of our data received from the search results
 
 ### Challenges:
+The main challenges we encountered were formatting the search bar for the best user experience and adding the filtering feature for the search results. It proved to be difficult to get results that satisfy 2 conditions. At first, we were only able to satisfy one condition. However, after more work and research we were able to help users narrow down their results.
+Once a search bar was created, we needed to think of a way to make the filter feature look cohesive alongside. We tried adding it to many places, and finally decided that putting it next to the search bar would look the best. Since the original code only allowed for one element on the search bar line, we had to edit the CSS code to allow for the addition. The editing would cause issues with the look of the button, making formatting take extra time.
 
-...
 
 ### Future Work:
 
-...
+* Add more security and error checking to Contact Us form submission process
+* Add additional filtering options for the Home page
+* Offer more and different options for the user to search using different dates and other relevant crime data elements
+* Create an interactive map for users to further explore crime within Prince George's county
+* Ensure browser compatability with other main browsers such as Firefox and Internet Explorer
