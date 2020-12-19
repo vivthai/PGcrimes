@@ -13,6 +13,6 @@ app.use(bodyParser.json())
 app.use(resultsRoute)
 
 app.use(express.static('public'))
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 4000
 
 app.listen(PORT, () => console.info(`Server has started on ${PORT}`)) 
