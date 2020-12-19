@@ -79,11 +79,11 @@ function submitNewCrimeType() {
           crimeType = outcome.data.crimeType;
           outcomeId = outcome.id;
           searchNum = outcome.data.searchNum;
-          message = "Message: " + outcome.message + " please refresh the page to see the result."
+          message = "Success! Please refresh the page to see the result."
           "<br>crimeTypeId: " + outcomeId + " crimeType: " + crimeType + "<br> ";
         }
         else if (typeof outcome !== "undefined") {
-          message = "Message: " + outcome.message;
+          message = "Please try again. Crime type entered already exists.";
         }
         document.getElementById("postCrimeTypeContent").innerHTML = message;
       })

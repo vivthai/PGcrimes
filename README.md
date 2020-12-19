@@ -7,7 +7,7 @@ PGcrime is a web-based application created by University of Maryland students, d
 With PGcrime, users can see navigate accurate and organized PG County crime via the search and data functionality.
 
  # PGcrime Heroku Site
- 
+ https://pgcrime.herokuapp.com/
  
  # Supported Browsers
  * Google Chrome for Desktop and Mobile
@@ -62,44 +62,40 @@ npm install
 Start the application server
 
 ```start
-npm start run-watch
+npm run start-watch
 ```
 Type in your internet browser
 
 ```localhost
-localhost:8080
-```
-
-## Testing 
-
-In the main repository directory:
-
-```test
-npm test
+localhost:4000
 ```
 
 ## Server API
 
 ### Endpoints
+
 #### PUT:
-* PUT requests route is for form submissions (Contact Us!)
 * PUT requests can be submitted to /api
-* PUT request must be in json form and conform to the parameters set by the database (for the form)
-* PUT requests return a conformation string or an error message once completed
 
 #### GET:
 * GET requests can be retrieved from /api
-* GET request retrieve a list of JSON objects containing PG crimes information from the database
+* GET requestS retrieve a list of JSON objects containing PG crimes information from the database
+* GET requests return a conformation string or an error message once completed
 
 #### POST:
-* POST is used to send data to our server to update our database(Data page).
+* POST is used to send data to our server to update our database (Data page)
+* POST requests route is for form submissions (Contact Us form)
 
 # Known BUGS
-* The website has **No** security, so do not put any sensitive information
-* We were not able to let the user choose the date that he wants for the home page search. 
+* The website has litte cybersecurity implementation
+* No verification for user input on the Data page
+* No date filter on the Home page that allows user to sort the results 
+
 
 # Future Development
-* Add more security and error checking to form submissions
-* Add a filtering option for the home page
-* Offer more and different options to the user to search using different dates. 
+* Add more security and error checking to Contact Us form submission process
+* Add additional filtering options for the Home page
+* Offer more and different options for the user to search using different dates and other relevant crime data elements
+* Create an interactive map for users to further explore crime within Prince George's county
+* Ensure browser compatability with other main browsers such as Firefox and Internet Explorer
 
