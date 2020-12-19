@@ -27,8 +27,9 @@ Our solution to solve this problem, is by creating a way for the user to access 
   * Used for presentation of our data received from the search results
 
 ### Challenges:
+The main challenges we encountered were formatting the search bar for the best user experience and adding the filtering feature for the search results. It proved to be difficult to get results that satisfy 2 conditions. At first, we were only able to satisfy one condition. However, after more work and research we were able to help users narrow down their results.
+Once a search bar was created, we needed to think of a way to make the filter feature look cohesive alongside. We tried adding it to many places, and finally decided that putting it next to the search bar would look the best. Since the original code only allowed for one element on the search bar line, we had to edit the CSS code to allow for the addition. The editing would cause issues with the look of the button, making formatting take extra time.
 
-...
 
 ### Future Work:
 
