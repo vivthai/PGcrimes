@@ -24,7 +24,7 @@ Our solution to solve this problem, is by creating a way for the user to access 
 * SQLite Database
   * Used for embedded storage of our data in the back end of our system
 * Bar Graph (with CanvasJs)
-  * Used for presentation of our data from the search results
+  * Used for presentation of our data received from the search results
 
 ### Challenges:
 
