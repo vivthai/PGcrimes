@@ -21,7 +21,9 @@ Our solution to solve this problem, is by creating a way for the user to access 
 
 ### Technical system decision rationale:
 
-...
+*SQLite Database
+**Used for embedded storage of our data in the back end of our system
+
 
 ### Challenges:
 
