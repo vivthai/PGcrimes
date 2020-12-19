@@ -68,4 +68,16 @@ button[type="submit"]:hover{
     background-color: #155E58;
     color: white;
 }
-
+ul.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+  }
+.help{
+    padding-top: 50px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    font-size: 16px;
+    text-align: center;
+} 
