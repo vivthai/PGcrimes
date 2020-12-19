@@ -96,3 +96,4 @@ localhost:4000
 * Create an interactive map for users to further explore crime within Prince George's county
 * Ensure browser compatability with other main browsers such as Firefox and Internet Explorer
 
+
