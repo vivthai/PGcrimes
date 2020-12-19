@@ -74,7 +74,6 @@ localhost:4000
 
 ### Endpoints
 #### PUT:
-* PUT requests route is for form submissions (Contact Us form)
 * PUT requests can be submitted to /api
 * PUT request must be in json form and conform to the parameters set by the database (Contact Us form)
 * PUT requests return a conformation string or an error message once completed
@@ -85,6 +84,7 @@ localhost:4000
 
 #### POST:
 * POST is used to send data to our server to update our database (Data page)
+* POST requests route is for form submissions (Contact Us form)
 
 # Known BUGS
 * The website has litte cybersecurity implementation
