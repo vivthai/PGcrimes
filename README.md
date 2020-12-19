@@ -45,17 +45,11 @@ npm install
 ```
 
  Npm packages include:
-* Bulma - CSS framework
 * Express - Node.js server framework
-* Mocha - JavaScript test framework
 * Sqlite, sqlite3 - SQL database backend
-* Babel - Access ES6+ JavaScript features
-* Node-fetch - Access fetch API
 * Nodemon - Restart node server while coding changes
-* Flatpickr - Datetime picker
-* Heatmap.js, leaflet-heatmap - Leaflet heatmap plugin
-* Autoprefixer, node-sass, postcss-cli - Edit and save Sass files
-* Npm-run-all - Run multiple npm scripts
+* body-parser - Node.js body parsing middleware
+* ejs - Embedded JavaScript templates
 
 ## Deployment
 
@@ -76,6 +70,7 @@ localhost:4000
 
 #### PUT:
 * PUT requests can be submitted to /api
+* PUT is used to send data to our server to update our database
 
 #### GET:
 * GET requests can be retrieved from /api
@@ -83,7 +78,7 @@ localhost:4000
 * GET requests return a conformation string or an error message once completed
 
 #### POST:
-* POST is used to send data to our server to update our database (Data page)
+* POST is used to add data to our database (Data page)
 * POST requests route is for form submissions (Contact Us form)
 
 # Known BUGS
@@ -98,4 +93,5 @@ localhost:4000
 * Offer more and different options for the user to search using different dates and other relevant crime data elements
 * Create an interactive map for users to further explore crime within Prince George's county
 * Ensure browser compatability with other main browsers such as Firefox and Internet Explorer
+
 
