@@ -14,19 +14,19 @@
   #addTypebtn{
     align-items: center;
     text-align: center;
-    margin-left: 400px;
-    margin-top: 50px;
+    margin-left: 42%;
+    margin-right: 42%;
  
   }
   
-
 
   #crimeInput{
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-left: 700px;
+    margin:auto;
     padding: 5px;
+    margin-bottom: 2%;
   }
 
   table, th, td {
@@ -248,7 +248,7 @@ color:black;
   button[type="submit"]{
   
       float: left;
-      width: 50%; 
+      width: 15%; 
       height: 30px;
       background-color: #155E58;
       color: white;
