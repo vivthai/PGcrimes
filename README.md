@@ -52,9 +52,6 @@ npm install
 * Babel - Access ES6+ JavaScript features
 * Node-fetch - Access fetch API
 * Nodemon - Restart node server while coding changes
-* Flatpickr - Datetime picker
-* Heatmap.js, leaflet-heatmap - Leaflet heatmap plugin
-* Autoprefixer, node-sass, postcss-cli - Edit and save Sass files
 * Npm-run-all - Run multiple npm scripts
 
 ## Deployment
