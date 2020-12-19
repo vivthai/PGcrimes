@@ -14,9 +14,8 @@
   #addTypebtn{
     align-items: center;
     text-align: center;
-    margin-left: 42%;
-    margin-right: 42%;
- 
+    margin-left: 42.5%;
+
   }
   
 
@@ -248,8 +247,8 @@ color:black;
   button[type="submit"]{
   
       float: left;
-      width: 15%; 
-      height: 30px;
+      max-width: 15%; 
+      height: 35px;
       background-color: #155E58;
       color: white;
       border: none;
