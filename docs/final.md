@@ -4,7 +4,7 @@
 Vivian Thai, Cholpon Zamir, Yuming Huang, Yao Poudima, Audrey Tsang
 
 ### App Link:
-...
+Link to PG Crimes Heroku: https://pgcrime.herokuapp.com/
 
 ### Information Problem:
 People have interest or motive to learn more about Prince George's county crime. They have a hard time getting reliable information, we aim to create a user-centered application to solve their needs through providing a searchable database.
