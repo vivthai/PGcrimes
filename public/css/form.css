@@ -2,7 +2,7 @@ body{
     font-family: "Helvetica";
 }
 section{
-    height: 70vh;
+    height: 70vp;
     width: 100%;
     background-color: #ffffff;
     display: flex;
@@ -18,6 +18,7 @@ p.a {
     margin-left: 50px;
     font: 16px Helvetica;
     text-align: center;
+   
   }  
 .container{
     width: 90%;
