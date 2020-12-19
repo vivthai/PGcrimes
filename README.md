@@ -96,6 +96,8 @@ npm test
 
 # Known BUGS
 * The website has litte cybersecurity implementation
+* No verification for user input on the Data page
+* No date filter on the Home page that allows user to sort the results 
 
 
 # Future Development
