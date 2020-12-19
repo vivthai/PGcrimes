@@ -32,6 +32,7 @@
 .name {
     display: flex;
     justify-content: center;
+   
 }
 
 .team{
@@ -66,3 +67,4 @@ ul{
 .main {
   margin-bottom: 20px;
 }
+
